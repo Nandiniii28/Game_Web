@@ -268,3 +268,21 @@ body {
   background-attachment: fixed;
   color: #fff;
 }
+.faq-section {
+  .accordion-button{
+    color: #ffffff ;
+    border-top: 1px solid;
+  }
+  .accordion-button:not(.collapsed){
+    color: #000;
+  }
+  .accordion-item{
+    color: #ffffff;
+    background-color: #ffffff00;
+    margin: 20px 0px;
+  }
+  .accordion {
+    --bs-accordion-color: #ffffff !important;
+    --bs-accordion-bg: #ffffff00 !important;
+  }
+}
