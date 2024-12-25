@@ -1,0 +1,270 @@
+// Custom variables
+$primary: #021645;
+$secondary: #872e68;
+$main-color-one: #ddf247;
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+body {
+  overflow-x: hidden;
+}
+// Custom styles
+.navbar {
+  padding: 1rem 0;
+  height: 70px;
+}
+
+.hero {
+  padding: 6rem 0;
+  background-color: $primary;
+  color: white;
+}
+
+.footer {
+  background-color: $primary;
+  color: white;
+  padding: 3rem 0;
+
+  a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.game-card {
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.about-banner {
+  background-color: $primary;
+  color: white;
+  padding: 5rem 0;
+}
+// ................ Hero Section ................ //
+.hero {
+  background-image: url("/public/images/main-bg-2.jpg");
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  position: relative;
+  color: #fff;
+  background-attachment: fixed;
+  height: 100vh;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-align: center;
+    z-index: 999;
+    position: relative;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+  }
+  .playBtn {
+    background: #021645;
+    color: #fff;
+    padding: 7px 26px;
+    border-radius: 3px;
+    z-index: 10;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 83%;
+  height: 100%;
+  background-image: url("/public/images/bg-1.png");
+  background-position: right;
+  opacity: 0.2;
+}
+@media (max-width: 768px) {
+  .navbar {
+    height: auto !important;
+  }
+}
+.frame-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  margin: auto;
+  overflow: hidden;
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 10;
+    clip-path: polygon(4% 10%, 100% 0%, 95% 98%, 10% 95%);
+  }
+}
+.primary-bg {
+  background-image: url("/public/images/10016606_27269.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  .h2 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-align: left;
+    z-index: 999;
+    position: relative;
+  }
+  .text-muted {
+    color: #fff !important;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    position: relative;
+    z-index: 999;
+  }
+  ul.details-list {
+    padding-left: 0px;
+    li {
+      color: #fff;
+      font-size: 1rem;
+      text-align: left;
+      position: relative;
+      z-index: 999;
+      list-style-type: none;
+
+      span {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        text-align: left;
+        position: relative;
+        z-index: 999;
+      }
+    }
+  }
+}
+
+.main-swiper {
+  background-image: url("/public/images/SL-6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// ................ Game Card Section ................ //
+.games-card {
+  padding: 2em 1.6em;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease-out;
+  border-radius: 14px;
+  text-align: center;
+  line-height: 30px;
+
+  &:hover {
+    background-color: #011436;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11);
+    color: #fff;
+  }
+}
+.game-content {
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  a.readmoreBtn {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.readmoreBtn .link_text {
+  position: relative;
+  margin-right: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-indent: -63px;
+  visibility: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  transition: visibility 0.4s ease, margin-right 0.4s ease-out,
+    text-indent 0.5s ease-out, opacity 0.4s ease;
+  will-change: visibility, margin-right, text-indent, opacity;
+}
+.games-card:hover .readmoreBtn .link_text,
+.games-card .readmoreBtn:hover .link_text {
+  opacity: 1;
+  text-indent: 0;
+  margin-right: 6px;
+  visibility: visible;
+  transition: visibility 0.4s ease, margin-right 0.3s ease-out,
+    text-indent 0.4s ease-out, opacity 0.4s ease;
+}
+.bi-arrow-right::before{
+  vertical-align: middle !important;
+}
+// ................ Slider Section ................ //
+.main-swiper::after{
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  background: linear-gradient(154deg, #2a2929, transparent);
+  content: "";
+}
+// ................ FAQ Section ................ //
+.faq-section{
+  background-image: url("/public/images/10016606_27269.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
