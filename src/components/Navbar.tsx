@@ -4,14 +4,14 @@ import { Menu } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{backgroundColor:"#020202"}}>
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img 
-            src="/globle-pay-me.png" 
+            src="./images/logo.png" 
             alt="Finunique Logo" 
             height="64"
-            className="d-inline-block align-top"
+            className="py-2 d-inline-block align-top"
           />
         </Link>
         
@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
         </button>
         
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav m-auto gap-5">
             <li className="nav-item">
               <Link to="/" className="nav-link">Home</Link>
             </li>

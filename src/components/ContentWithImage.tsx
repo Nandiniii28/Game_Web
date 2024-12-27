@@ -17,7 +17,7 @@ export const ContentWithImage: React.FC<ContentWithImageProps> = ({
   imageOnRight = false
 }) => {
   const content = (
-    <div className="col-lg-6">
+    <div className="col-lg-6 px-3">
       <h2 className="h2 mb-4">{title}</h2>
       <p className="text-muted mb-4">{description}</p>
       <ul className="list-unstyled">
@@ -32,7 +32,7 @@ export const ContentWithImage: React.FC<ContentWithImageProps> = ({
   );
 
   const image = (
-    <div className="col-lg-6">
+    <div className="col-lg-6 px-3">
       <div className="image-wrapper rounded overflow-hidden" style={{ maxHeight: '400px' }}>
         <img
           src={imageUrl}

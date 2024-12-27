@@ -2,12 +2,27 @@
 $primary: #021645;
 $secondary: #872e68;
 $main-color-one: #ddf247;
-
+:root {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap";
 body {
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
+.container {
+  padding-left: 0.75rem; 
+  padding-right: 0.75rem; 
+}
+*{
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 // Custom styles
 .navbar {
   padding: 1rem 0;
@@ -21,9 +36,9 @@ body {
 }
 
 .footer {
-  background-color: $primary;
+  background-color: #020202;
   color: white;
-  padding: 3rem 0;
+  padding: 4rem 0;
 
   a {
     color: rgba(255, 255, 255, 0.7);
@@ -50,7 +65,7 @@ body {
 }
 // ................ Hero Section ................ //
 .hero {
-  background-image: url("/public/images/main-bg-2.jpg");
+  background-image: url("/public/images/main-bg-2.webp");
   background-size: contain;
   background-position: center;
   display: flex;
@@ -95,7 +110,7 @@ body {
   left: 0;
   width: 83%;
   height: 100%;
-  background-image: url("/public/images/bg-1.png");
+  background-image: url("/public/images/bg-1.webp");
   background-position: right;
   opacity: 0.2;
 }
@@ -124,7 +139,7 @@ body {
   }
 }
 .primary-bg {
-  background-image: url("/public/images/10016606_27269.jpg");
+  background-image: url("/public/images/10016606_27269.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -168,17 +183,28 @@ body {
 }
 
 .main-swiper {
-  background-image: url("/public/images/SL-6.jpg");
+  background-image: url("/public/images/2304.w032.n002.977B.p15.977.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   position: relative;
+.text-align{
+  width: 50%;
+  float: inline-end;
+}
   .swiper {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
   }
-
+  .bonusBtn {
+    color: #fff;
+    background-color: #cb0018;
+    padding: 17px 45px;
+    margin-top: 5rem;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 7px 25px rgba(234, 1, 29, 0.2);
+  }
   .swiper-slide {
     background-position: center;
     background-size: cover;
@@ -191,7 +217,12 @@ body {
     width: 100%;
   }
 }
-
+@media (max-width: 768px) {
+  .text-align{
+    width: 100% !important;
+    float: inline-end;
+  }
+}
 // ................ Game Card Section ................ //
 .games-card {
   padding: 2em 1.6em;
@@ -242,41 +273,28 @@ body {
   transition: visibility 0.4s ease, margin-right 0.3s ease-out,
     text-indent 0.4s ease-out, opacity 0.4s ease;
 }
-.bi-arrow-right::before{
+.bi-arrow-right::before {
   vertical-align: middle !important;
 }
 // ................ Slider Section ................ //
-.main-swiper::after{
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  text-align: left;
-  top: 0;
-  width: 100%;
-  z-index: 0;
-  background: linear-gradient(154deg, #2a2929, transparent);
-  content: "";
-}
+
 // ................ FAQ Section ................ //
-.faq-section{
-  background-image: url("/public/images/10016606_27269.jpg");
+.faq-section {
+  background-image: url("/public/images/10016606_27269.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: #fff;
 }
 .faq-section {
-  .accordion-button{
-    color: #ffffff ;
+  .accordion-button {
+    color: #ffffff;
     border-top: 1px solid;
   }
-  .accordion-button:not(.collapsed){
+  .accordion-button:not(.collapsed) {
     color: #000;
   }
-  .accordion-item{
+  .accordion-item {
     color: #ffffff;
     background-color: #ffffff00;
     margin: 20px 0px;
@@ -284,5 +302,587 @@ body {
   .accordion {
     --bs-accordion-color: #ffffff !important;
     --bs-accordion-bg: #ffffff00 !important;
+  }
+}
+// ................ Games Section ................ //
+.games-section {
+  background-image: url("/public/images/10016606_27269.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  .heading {
+    line-height: 1.088em;
+    text-align: center;
+    margin: 8rem 0px 5rem;
+    p {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      opacity: 0.9;
+      color: #fff;
+    }
+    span {
+      -webkit-text-stroke-width: 0px;
+      font-size: 115px;
+      line-height: 1.1em;
+      letter-spacing: -0.03em;
+      color: #fff;
+    }
+  }
+  .poker-game {
+    background-image: url("/public/images/poker.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #2b2f3b;
+  }
+  .casino-game {
+    background-image: url("/public/images/casino.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #2b2f3b;
+  }
+  .ludo-game {
+    background-image: url("/public/images/SL-11.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #2b2f3b;
+  }
+  .game-bx {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    background-color: #2b2f3b;
+    height: 20rem;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .game-bx::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+  .inner-bx {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    max-height: 100%;
+
+    .inner-card {
+      padding: 1.2em 1em;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 10px;
+      .game-heading {
+        overflow: hidden;
+        padding-bottom: 0.25em;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        h4 {
+          max-width: 75%;
+        }
+        .description-link {
+          padding: 1px;
+          position: relative;
+          display: inline-block;
+          font-size: 15px;
+          line-height: 21px;
+          font-weight: 500;
+          color: #1c1919;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          .link_text {
+            display: none;
+            position: relative;
+            margin-right: 0;
+            vertical-align: middle;
+            text-indent: -110px;
+            visibility: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            transition: visibility 0.4s ease, margin-right 0.4s ease-out,
+              text-indent 0.5s ease-out, opacity 0.4s ease;
+            will-change: visibility, margin-right, text-indent, opacity;
+          }
+          .icon i {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+            font-weight: 400;
+            display: inline-block;
+            vertical-align: top;
+            color: currentColor;
+            transition: transform 0.3s ease;
+          }
+        }
+      }
+      .sc_services_item_text {
+        height: 0;
+        opacity: 0;
+        max-width: 95%;
+        font-size: 17px;
+        line-height: 25px;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-transition: height 0.3s ease-out, margin-top 0.3s ease-out,
+          opacity 0.3s ease-out;
+        -ms-transition: height 0.3s ease-out, margin-top 0.3s ease-out,
+          opacity 0.3s ease-out;
+        transition: height 0.3s ease-out, margin-top 0.3s ease-out,
+          opacity 0.3s ease-out;
+      }
+    }
+  }
+}
+.game-bx:hover .game-heading + .sc_services_item_text {
+  margin-top: 5px;
+}
+.game-bx:hover .sc_services_item_text {
+  opacity: 1 !important;
+  height: 25px !important;
+}
+.game-bx:hover .icon i {
+  transform: rotate(-45deg);
+}
+// ................ Testimonials Section ................ //
+.testimonials-section {
+  background-image: url("/public/images/10016606_27269.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  .heading {
+    .h2 {
+      color: #fff;
+    }
+    p.text-muted {
+      color: #fff !important;
+      margin-bottom: 4rem;
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .testimonial-swiper {
+    position: relative;
+    padding: 77px 40px;
+    height: auto;
+    box-sizing: border-box;
+    background-color: #171717;
+    transition: all 0.3s ease;
+    margin-bottom: 0;
+    margin-top: 0;
+    border-radius: 14px;
+  }
+  .user-comment {
+    text-align: left;
+    font-size: 19px;
+    line-height: 1.53em;
+    color: #d2d3d5;
+    transition: all 0.3s ease;
+    margin-top: 36px;
+  }
+  .comment-author {
+    margin: 65px 0 0;
+    max-width: none;
+    padding: 0;
+    background-color: transparent;
+    color: #d2d3d5;
+    text-align: left;
+    .author-name {
+      p {
+        margin: 0;
+        color: #fcfcfc;
+        font-size: 19px;
+        line-height: 24px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0;
+        text-transform: none;
+      }
+    }
+    .author-title {
+      margin-top: 10px;
+      color: #d2d3d5;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .our-success {
+    padding: 0px 30px;
+    text-align: center;
+    h4 {
+      font-size: 19px;
+      line-height: 1.4em;
+      font-weight: 500;
+      font-style: normal;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0;
+      font-size: 3.611em;
+      line-height: 1em;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+    }
+  }
+}
+.testimonials-section {
+  .rating-icon {
+    text-align: left;
+    i {
+      color: #ffd700;
+    }
+  }
+}
+// //................... Games Page Section ............//
+.games-cards {
+  &:hover {
+    .game-body::after {
+      width: 100%;
+    }
+    .game-card-img img {
+      transform: scale(1.07, 1.07);
+    }
+    .link_icon {
+      border-color: #fcfcfc;
+    }
+  }
+  .game-card-img {
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .game-name {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 700;
+    .game_number {
+      padding: 1px 0;
+      margin-right: 0;
+      display: inline-block;
+      color: inherit;
+      opacity: 0;
+      text-indent: -50px;
+      white-space: nowrap;
+      will-change: text-indent, opacity, margin-right;
+      transition: text-indent 0.4s ease-out, opacity 0.4s ease-out,
+        margin-right 0.2s ease-out;
+    }
+    .game_item_title_text {
+      padding: 1px 0;
+      white-space: nowrap;
+    }
+  }
+  .bi-arrow-right::before {
+    vertical-align: inherit !important;
+  }
+  .link_icon {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    color: #fff;
+
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 2.3em;
+    height: 2.3em;
+    line-height: 2.3em;
+    text-align: center;
+    border: 1px solid #3c3f47;
+    border-radius: 50%;
+    will-change: border-color;
+    transition: border-color 0.3s 0.1s ease-out;
+  }
+  .game-body {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .game-body::before,
+  .game-body::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    background-color: #3c3f47;
+  }
+  .game-body::after {
+    width: 0;
+    background-color: #fcfcfc;
+    will-change: width;
+    -webkit-transition: width 0.4s ease;
+    -ms-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+  }
+}
+.games-cards:hover .game_number {
+  opacity: 1;
+  text-indent: 0;
+  margin-right: 0.45em;
+}
+
+.startedBtn {
+  .startBtn {
+    color: #fff;
+    background-color: #cb0018;
+    padding: 17px 45px;
+    margin-top: 25px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 7px 25px rgba(234, 1, 29, 0.2);
+  }
+}
+.side_game_content {
+  h2 {
+    line-height: 1.088em;
+    font-size: 3.353em;
+  }
+  p {
+    line-height: 1.2em;
+    font-size: 1.333em;
+  }
+  .bonusBtn {
+    color: #fff;
+    background-color: #cb0018;
+    padding: 17px 45px;
+    margin-top: 25px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 7px 25px rgba(234, 1, 29, 0.2);
+  }
+}
+.side_game_img {
+  img {
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.07, 1.07);
+    }
+  }
+}
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.marquee {
+  white-space: nowrap;
+  animation: scroll-left linear infinite;
+
+  h1 {
+    color: #ea011d;
+    background: linear-gradient(45deg, #ff0f7b, #f89b29);
+    background-clip: text;
+    background-size: 200% 100%;
+    padding-top: 0.1em;
+    font-size: 5rem;
+    font-weight: 600;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.subscription-bg {
+  background-color: #171717;
+  color: #fff;
+  padding: 75px 0px;
+  margin-top: 50px;
+
+  .subscription-card {
+    .subscription-content {
+      h2 {
+        font-size: 2.765em;
+      }
+      p {
+        font-size: 28px;
+      }
+    }
+  }
+  .subscription-form {
+    input {
+      background-color: #373737 !important;
+      padding: 0.7em 1.7em;
+      font-size: 16px;
+      line-height: 22px;
+      width: 100%;
+      margin: 0;
+      height: 55px;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 3px 25px rgba(0, 0, 0, 0.05) !important;
+    }
+    .subscribeBtn {
+      height: 55px;
+      line-height: 55px;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 400;
+      display: inline-block;
+      white-space: normal;
+      border-radius: 30px;
+      box-shadow: 0 7px 25px rgba(234, 1, 29, 0.2) !important;
+      color: #ffffff !important;
+      border-color: #ea011d !important;
+      background-color: #ea011d !important;
+      padding: 0 44px !important;
+    }
+  }
+}
+.games_card_page_section{
+  position: relative;
+  color: #fff;
+  padding-top: 80px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%; 
+    height: 100%;
+    background-image: url("/public/images/coin-bg3.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0.6;
+  }
+  .side-content{
+    .h2{
+      font-size: 3rem;
+    }
+    p{
+      font-size: 1.3rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .games-section .heading span{
+    font-size: 1.5rem;
+  }
+}
+// //....................... Footer Section .................//
+.office_address{
+  line-height: 2;
+  p{
+    font-size: 20px;
+  }
+  span{
+    font-size: 14px;
+  }
+}
+.link_section{
+  ul{
+    li{
+      line-height: 39px;
+    }
+  }
+}
+.bg-coins-1{
+  position: absolute;
+  width: 40px;
+  left: 37px;
+}
+.bg-coins-2{
+  position: absolute;
+  width: 40px;
+  right: 37px;
+  bottom: 50%;
+}
+@media (max-width: 768px) {
+  .bg-coins-2{
+    bottom: 0px;
+  }
+  
+}
+// //................ About Section ...........//
+.about_section{
+  padding-top: 80px;
+  background-image: url('/public/images/1738.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 450px;
+  .about_content{
+    width: 60%;
+    .downloadBtn{
+      color: #fff;
+      background-color: #cb0018;
+      padding: 17px 45px;
+      margin-top: 25px;
+      border-radius: 30px;
+      border: none;
+      box-shadow: 0 7px 25px rgba(234, 1, 29, 0.2);
+      &:hover{
+        background-color: #ac0216;
+        border: none;
+        // box-shadow: 0 7px 25px rgba(234, 1, 29, 0.2);
+        box-shadow: inset rgb(167 0 20 / 20%) 0px 117px 60px -25px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      }
+    }
+  }
+}
+.about-content-section{
+  padding-top: 80px;
+  padding-bottom: 80px; 
+  background-image: url('/public/images/10016606_27269.webp');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  img.img-width{
+    width: 500px;
   }
 }
